@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" id="homeLink">Home</a></li>
+            <li><a href="#" id="booksLink">Books</a></li>
+            <li><a href="#" id="borrowedBooksLink">Borrowed Books</a></li>
+            <li><a href="#" id="loginLink">Login</a></li>
+            <li><a href="#" id="signUpLinkNav">Sign Up</a></li>
+            <li><a href="#" id="adminLink">Admin</a></li>
+        </ul>
+    </nav>
+
+    <!-- Loading Page -->
+    <div id="loadingPage">
+        <div class="loading-content">
+            <h1>Library Management System</h1>
+            <div class="loading-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Page -->
+    <div class="login-page">
+        <header>
+            <h1>Login</h1>
+        </header>
+        <div class="form-container">
+            <h2>Login</h2>
+            <form id="loginFormElement">
+                <input type="email" id="loginEmail" placeholder="Enter Email" required>
+                <input type="password" id="loginPassword" placeholder="Enter Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="forgot-password">
+                <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+            </div>
+            <div class="sign-up">
+                <p>Don't have an account? <a href="#" id="signUpLink">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Page -->
+    <div class="forgot-password-page">
+        <header>
+            <h1>Forgot Password</h1>
+        </header>
+        <div class="form-container">
+            <h2>Enter Your Email</h2>
+            <form id="forgotPasswordForm">
+                <input type="email" id="forgotEmail" placeholder="Enter your email" required>
+                <button type="submit">Next</button>
+            </form>
+            <div>
+                <button class="back-button" id="backToLoginFromForgot">Back to Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Password Page -->
+    <div class="new-password-page">
+        <header>
+            <h1>Reset Password</h1>
+        </header>
+        <div class="form-container">
+            <h2>Enter New Password</h2>
+            <form id="newPasswordForm">
+                <input type="password" id="newPassword" placeholder="Enter New Password" required>
+                <input type="password" id="confirmNewPassword" placeholder="Confirm New Password" required>
+                <button type="submit">Reset Password</button>
+            </form>
+            <div>
+                <button class="back-button" id="backToLoginFromNewPassword">Back to Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Page -->
+    <div class="sign-up-page">
+        <header>
+            <h1>Sign Up</h1>
+        </header>
+        <div class="form-container">
+            <h2>Create a New Account</h2>
+            <form id="signUpForm">
+                <input type="email" id="signUpEmail" placeholder="Enter your email" required>
+                <input type="password" id="signUpPassword" placeholder="Enter a password" required>
+                <input type="password" id="confirmSignUpPassword" placeholder="Confirm password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <div>
+                <button class="back-button" id="backToLoginFromSignUp">Back to Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books Page -->
+    <div class="books-page">
+        <header>
+            <h1>Available Books</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by title or author...">
+            </div>
+        </header>
+        <div class="books-container" id="bookList">
+            <!-- Books will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Borrowed Books Page -->
+    <div class="borrowed-books-page">
+        <header>
+            <h1>Borrowed Books</h1>
+        </header>
+        <div class="borrowed-books-container" id="borrowedBookList">
+            <!-- Borrowed books will be dynamically added here -->
+        </div>
+    </div>
+
+    <!-- Admin Page -->
+    <div class="admin-page">
+        <header>
+            <h1>Admin Dashboard</h1>
+        </header>
+        <div class="admin-container">
+            <!-- Admin Login Form -->
+            <div id="adminLoginForm">
+                <h2>Admin Login</h2>
+                <form id="adminLoginFormElement">
+                    <input type="email" id="adminEmail" placeholder="Enter Admin Email" required>
+                    <input type="password" id="adminPassword" placeholder="Enter Admin Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <!-- Admin Content (Hidden Initially) -->
+            <div id="adminContent" style="display: none;">
+                <h2>User Management</h2>
+                <div class="user-list" id="userList">
+                    <!-- Users will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
